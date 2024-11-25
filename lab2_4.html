@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Обчислення факторіала за допомогою циклів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Обчислення факторіала числа через цикли (for, while, do while)</h1>
+
+        <script>
+            "use strict";
+            let n = parseInt(prompt("Введіть число для обчислення факторіала"));
+
+            if (isNaN(n) || n < 0) {
+                document.write("Будь ласка, введіть невід'ємне число.");
+            } else {
+                let factorialFor = 1;
+                for (let i = 1; i <= n; i++) {
+                    factorialFor *= i;
+                }
+
+                let factorialWhile = 1;
+                let i = 1;
+                while (i <= n) {
+                    factorialWhile *= i;
+                    i++;
+                }
+
+                let factorialDoWhile = 1;
+                i = 1;
+                do {
+                    factorialDoWhile *= i;
+                    i++;
+                } while (i <= n);
+
+                document.write("<p>Факторіал числа " + n + " за допомогою циклу <b>for</b>: " + factorialFor + "</p>");
+                document.write("<p>Факторіал числа " + n + " за допомогою циклу <b>while</b>: " + factorialWhile + "</p>");
+                document.write("<p>Факторіал числа " + n + " за допомогою циклу <b>do while</b>: " + factorialDoWhile + "</p>");
+            }
+        </script>
+        
+        <a href="index.html" class="btn">На головну</a>
+    </div>
+</body>
+</html>

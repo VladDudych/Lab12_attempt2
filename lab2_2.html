@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Покупка продуктів на новий рік</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        "use strict";
+        alert("Нам треба приготувати страви на новий рік, скільки робимо?");
+        
+        function getNumericInput(promptMessage) {
+            let value;
+            while (true) {
+                value = prompt(promptMessage);
+                if (!isNaN(value) && value !== null && value !== "") {
+                    return parseFloat(value);
+                } else {
+                    alert("Будь ласка, введіть число!");
+                }
+            }
+        }
+
+        let salad = getNumericInput("Кількість салатів?");
+        let appetizer = getNumericInput("Кількість закусок?");
+        let maincourse = getNumericInput("Кількість основних страв?");
+        let desertes = getNumericInput("Кількість десертів?");
+        
+        let maxAmount = Math.max(salad, appetizer, maincourse, desertes);
+        let food = "";
+        
+        if (maxAmount === salad) {
+            food = "Салати";
+        } else if (maxAmount === appetizer) {
+            food = "Закуски";
+        } else if (maxAmount === maincourse) {
+            food = "Основні страви";
+        } else {
+            food = "Десерти";
+        }
+
+        document.write(`<div class="result">Найбільше ми робимо: ${food} - ${maxAmount}</div>`);
+        document.write('<div><a href="index.html" class="back-button">На головну</a></div>');
+    </script>
+</body>
+</html>

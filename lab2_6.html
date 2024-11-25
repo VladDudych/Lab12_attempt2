@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вгадати кількість спроб</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Вгадати, за скільки спроб я здам сесію</h1>
+
+        <script>
+            "use strict";
+            const randomStoops = Math.floor(Math.random() * 10) + 1; 
+            let attempts = 0; 
+
+            let guess = parseInt(prompt("Скільки спроб займе у мене аби успішно скласти сесію? Вгадай число від 1 до 10"));
+
+            while (guess !== randomStoops) {
+                attempts++;
+                if (guess < randomStoops) {
+                    guess = parseInt(prompt("Мало! Спробуйте ще раз! Введіть число від 1 до 10"));
+                } else if (guess > randomStoops) {
+                    guess = parseInt(prompt("Забагато! Спробуйте ще раз! Введіть число від 1 до 10"));
+                }
+            }
+
+            attempts++;
+            alert("Вітаємо! Ви вгадали число! Я скалду сесію після " + randomStoops + " спроб/и. Кількість ваших спроб вгадати: " + attempts);
+        </script>
+
+        <a href="index.html" class="btn">На головну</a>
+    </div>
+</body>
+</html>

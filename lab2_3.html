@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Місяць народження</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        "use strict";
+        alert("Котрого місяця ви народилися?");
+        
+        function getMonthInput() {
+            let month;
+            while (true) {
+                month = prompt("Введіть число місяця вашого народження (1-12):");
+                if (!isNaN(month) && month >= 1 && month <= 12) {
+                    return month;
+                } else {
+                    alert("Будь ласка, введіть число від 1 до 12!");
+                }
+            }
+        }
+
+        let month = getMonthInput();
+        let message = "";
+
+        switch (month) {
+            case "1":
+                message = "Ви народилися в січні!";
+                break;
+            case "2":
+                message = "Ви народилися в лютому!";
+                break;
+            case "3":
+                message = "Ви народилися в березні!";
+                break;
+            case "4":
+                message = "Ви народилися в квітні!";
+                break;
+            case "5":
+                message = "Ви народилися в травні!";
+                break;
+            case "6":
+                message = "Ви народилися в червні!";
+                break;
+            case "7":
+                message = "Ви народилися в липні!";
+                break;
+            case "8":
+                message = "Ви народилися в серпні!";
+                break;
+            case "9":
+                message = "Ви народилися у вересні!";
+                break;
+            case "10":
+                message = "Ви народилися в жовтні!";
+                break;
+            case "11":
+                message = "Ви народилися в листопаді!";
+                break;
+            case "12":
+                message = "Ви народилися в грудні!";
+                break;
+        }
+
+        document.write(`<div class="result">${message}</div>`);
+        document.write('<div><a href="index.html" class="back-button">На головну</a></div>');
+    </script>
+</body>
+</html>

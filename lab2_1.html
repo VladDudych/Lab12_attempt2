@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Мови для освітнього процесу</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        "use strict";
+        alert("Привіт, зараз буде суто освітній процес, ти дізнаєшся як можна сказти привіт з людиною різними мовами, просто обери яку хочеш побачити.");
+        
+        let language = prompt("Оберіть мову: ua, uk, de, it, fr").toLowerCase();
+        let message = "";
+
+        switch (language) {
+            case "ua":
+                message = "Вітаю";
+                break;
+            case "uk":
+                message = "Greetings";
+                break;
+            case "de":
+                message = "Hallo";
+                break;
+            case "it":
+                message = "Buon Giorno";
+                break;
+            case "fr":
+                message = "Bonjour";
+                break;
+            default:
+                message = "Ви не вибрали мову із запропонованих!";
+        }
+
+        document.write(`<div class="result">${message}</div>`);
+        document.write('<div><a href="index.html" class="back-button">На головну</a></div>');
+    </script>
+</body>
+</html>

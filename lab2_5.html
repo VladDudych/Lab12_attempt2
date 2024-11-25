@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дудчи Владислав</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Інформація про мене</h1>
+
+        <script>
+            "use strict";
+            const friend = {
+                name: "Дудич Владислав",
+                gender: "Чоловік",
+                residence: "Львів",
+                birthday: "12.06.2006",
+                status: "Робить самостійну"
+            };
+
+            let infoText = "";
+
+            for (let key in friend) {
+                infoText += key.charAt(0).toUpperCase() + key.slice(1) + ": " + friend[key] + "<br>";
+            }
+
+            document.write('<h2>' + infoText + '</h2>');
+        </script>
+
+        <a href="index.html" class="btn">На головну</a>
+    </div>
+</body>
+</html>
